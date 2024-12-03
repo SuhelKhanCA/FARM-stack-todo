@@ -4,10 +4,11 @@ Hospital management system with AI support.
 
 ## Table of Contents
 
-- [**AMU-eConnect**](#amu-econnect)
+- [**Hospital Mangement System**](#Hospiatal-management-system)
 - [Documentation](#documentation)
   - [Table of Contents](#table-of-contents)
   - [Purpose](#purpose)
+  - [Project Structure](#project-structure)
   - [Features](#features)
     - [User-Specific Features](#user-specific-features)
     - [Admin-Specific Features](#admin-specific-features)
@@ -35,3 +36,7 @@ Hospital management system with AI support.
 ---
 
 ## Purpose
+The purpose of this application is to provide a system that can serve their needs. Users can register as a patient and ask question to our chatboats. These chatboats are designed to provide information about Hospital and to help them in primary aid.
+
+## Project Structure
+The following is the project structure of entire web application:

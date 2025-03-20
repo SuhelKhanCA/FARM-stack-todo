@@ -1,0 +1,74 @@
+.ListToDoLists {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ListToDoLists .summary {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.ListToDoLists .summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.ListToDoLists .name {
+  font-size: 1.1em;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.ListToDoLists .count {
+  padding-left: 10px;
+  color: #9b59b6;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.ListToDoLists .trash {
+  color: #e74c3c;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.ListToDoLists .trash:hover {
+  color: #c0392b;
+}
+
+.ListToDoLists .box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: none;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.ListToDoLists.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .ListToDoLists {
+    padding: 0 15px;
+  }
+  
+  .ListToDoLists .summary {
+    padding: 12px 15px;
+  }
+  
+  .ListToDoLists .box {
+    padding: 15px;
+  }
+}

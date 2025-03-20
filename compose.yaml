@@ -1,0 +1,46 @@
+name: todo-app
+services:
+  nginx:
+    image: nginx:1.17
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8000:80
+    depends_on:
+      - backend
+      - frontend
+  frontend:
+    build: ./frontend
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend/:/app
+      - /app/node_modules
+    expose:
+      - "5173"
+    ports:
+      - "5173:5173"
+    command: "npm run dev"
+    networks:
+      - app-network
+  backend:
+    image: todo-app/backend
+    build: ./backend
+    volumes:
+      - ./backend/:/usr/src/app
+    expose:
+      - "3001"
+    ports:
+      - "8001:3001"
+    command: "python src/server.py"
+    environment:
+      - DEBUG=true
+    env_file:
+      - path: ./.env
+        required: true
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

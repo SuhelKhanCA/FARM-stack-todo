@@ -12,8 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dal import ToDoDAL, ListSummary, ToDoList
 
 COLLECTION_NAME = "todo_lists"
-# MONGODB_URI = os.environ["MONGODB_URI"]
-MONGODB_URI = 'mongodb+srv://todoManager:a2pSnM4m4spyaMRv@cluster0.dctc5.mongodb.net/todo?retryWrites=true&w=majority&appName=Cluster0'
+MONGODB_URI = os.environ["MONGODB_URI"]
 DEBUG = os.environ.get("DEBUG", "").strip().lower() in {"1", "true", "on", "yes"}
 
 

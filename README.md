@@ -89,7 +89,7 @@ A modern, full-stack todo list application built with the FARM (FastAPI, React, 
                    │  (Port 3001) │
                    └──────────────┘
 ```
-
+![alt text](snapshots/architecture.png)
 ### API Endpoints
 
 ```
